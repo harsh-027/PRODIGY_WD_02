@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="stopwatch">
+            <svg class="progress-ring" width="300" height="300">
+                <!-- Background circles -->
+                <circle class="progress-ring__circle-bg" cx="150" cy="150" r="120" stroke="#333" stroke-width="10" fill="none"/>
+                <circle class="progress-ring__circle-bg" cx="150" cy="150" r="100" stroke="#333" stroke-width="10" fill="none"/>
+                <circle class="progress-ring__circle-bg" cx="150" cy="150" r="80" stroke="#333" stroke-width="10" fill="none"/>
+                
+                <!-- Progress circles -->
+                <circle class="progress-ring__circle progress-ring__circle--hours" cx="150" cy="150" r="120" stroke="#ff6b6b" stroke-width="10" fill="none" stroke-dasharray="754" stroke-dashoffset="754"/>
+                <circle class="progress-ring__circle progress-ring__circle--minutes" cx="150" cy="150" r="100" stroke="#4ecdc4" stroke-width="10" fill="none" stroke-dasharray="628" stroke-dashoffset="628"/>
+                <circle class="progress-ring__circle progress-ring__circle--seconds" cx="150" cy="150" r="80" stroke="#45b7d1" stroke-width="10" fill="none" stroke-dasharray="502" stroke-dashoffset="502"/>
+            </svg>
+            <div class="time-display">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
+        <div class="lap-list">
+            <h3>Lap Times</h3>
+            <ul id="laps"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
